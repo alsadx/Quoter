@@ -67,7 +67,9 @@ curl 'http://localhost:8080/quotes?author=Oscar%20Wilde'
 ```
 
 #### Удаление цитаты по ID
+```bash
 curl -X DELETE http://localhost:8080/quotes/1
+```
 
 ## Unit-тесты
 Проект содержит unit-тесты для:
