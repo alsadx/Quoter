@@ -1,0 +1,17 @@
+services:
+  quoter:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    container_name: quoter
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
